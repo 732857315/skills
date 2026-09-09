@@ -3,17 +3,17 @@
 	url = https://github.com/732857315/skill_circuit-board-design.git
 	branch = main
 
-[submodule "dependencies/KiCAD-MCP-Server"]
-	path = dependencies/KiCAD-MCP-Server
+[submodule "circuit-board-design-dependencies/KiCAD-MCP-Server"]
+	path = circuit-board-design-dependencies/KiCAD-MCP-Server
 	url = https://github.com/mixelpixx/KiCAD-MCP-Server.git
 	shallow = true
 
-[submodule "dependencies/kicad-python"]
-	path = dependencies/kicad-python
+[submodule "circuit-board-design-dependencies/kicad-python"]
+	path = circuit-board-design-dependencies/kicad-python
 	url = https://gitlab.com/kicad/code/kicad-python.git
 	shallow = true
 
-[submodule "dependencies/kicad-skip"]
-	path = dependencies/kicad-skip
+[submodule "circuit-board-design-dependencies/kicad-skip"]
+	path = circuit-board-design-dependencies/kicad-skip
 	url = https://github.com/psychogenic/kicad-skip.git
 	shallow = true

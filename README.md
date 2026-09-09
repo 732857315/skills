@@ -6,15 +6,15 @@
 | --- | --- | --- |
 | [circuit-board-design](./circuit-board-design) | 电路板设计：KiCad 原理图、PCB、符号库、封装库、3D 模型及工程核验 | [skill_circuit-board-design](https://github.com/732857315/skill_circuit-board-design) |
 
-## 电路板设计的依赖
+## circuit-board-design dependencies
 
 | 子模块 | 用途 |
 | --- | --- |
-| [dependencies/KiCAD-MCP-Server](./dependencies/KiCAD-MCP-Server) | KiCad MCP 服务 |
-| [dependencies/kicad-python](./dependencies/kicad-python) | 官方 IPC Python 库，实时读写已打开的 PCB |
-| [dependencies/kicad-skip](./dependencies/kicad-skip) | 原理图文件操作库 |
+| [circuit-board-design-dependencies/KiCAD-MCP-Server](./circuit-board-design-dependencies/KiCAD-MCP-Server) | KiCad MCP 服务 |
+| [circuit-board-design-dependencies/kicad-python](./circuit-board-design-dependencies/kicad-python) | 官方 IPC Python 库，实时读写已打开的 PCB |
+| [circuit-board-design-dependencies/kicad-skip](./circuit-board-design-dependencies/kicad-skip) | 原理图文件操作库 |
 
-版本、安装说明与可选工具见 [依赖说明](./dependencies/README.md)。在 GitHub 文件列表中点击子模块目录即可打开对应源码版本。
+版本、安装说明与可选工具见 [依赖说明](./circuit-board-design-dependencies/README.md)。在 GitHub 文件列表中点击子模块目录即可打开对应源码版本。
 
 ## 下载技能与直接依赖
 
@@ -30,4 +30,4 @@ git submodule update --init --depth 1
 
 ## 使用
 
-按技能目录中的 `README.md` 和 `SKILL.md` 操作。电路板设计安装目录名为 `circuit-board-design`，保留其 `agents/` 与 `references/`。`dependencies/` 中是工具源码，安装及 MCP 配置按 [依赖说明](./dependencies/README.md) 完成。
+按技能目录中的 `README.md` 和 `SKILL.md` 操作。电路板设计安装目录名为 `circuit-board-design`，保留其 `agents/` 与 `references/`。`circuit-board-design-dependencies/` 中是工具源码，安装及 MCP 配置按 [依赖说明](./circuit-board-design-dependencies/README.md) 完成。
