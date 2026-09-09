@@ -1,28 +1,33 @@
 # Skills
 
-可复用的 AI 技能集合。每项技能在独立公开仓库维护，本仓库通过 Git 子模块纳入对应目录，固定到已核验的版本。
+可复用的 AI 技能集合。技能与工具依赖通过 Git 子模块纳入对应目录，固定到明确版本。
 
 | 技能目录 | 用途 | 独立仓库 |
 | --- | --- | --- |
 | [circuit-board-design](./circuit-board-design) | 电路板设计：KiCad 原理图、PCB、符号库、封装库、3D 模型及工程核验 | [skill_circuit-board-design](https://github.com/732857315/skill_circuit-board-design) |
 
-在 GitHub 文件列表点击 `circuit-board-design` 目录，可进入该版本的完整技能文件。
+## 电路板设计的依赖
 
-## 下载完整内容
+| 子模块 | 用途 |
+| --- | --- |
+| [dependencies/KiCAD-MCP-Server](./dependencies/KiCAD-MCP-Server) | KiCad MCP 服务 |
+| [dependencies/kicad-python](./dependencies/kicad-python) | 官方 IPC Python 库，实时读写已打开的 PCB |
+| [dependencies/kicad-skip](./dependencies/kicad-skip) | 原理图文件操作库 |
+
+版本、安装说明与可选工具见 [依赖说明](./dependencies/README.md)。在 GitHub 文件列表中点击子模块目录即可打开对应源码版本。
+
+## 下载技能与直接依赖
 
 ```sh
-git clone --recurse-submodules https://github.com/732857315/skills.git
+git clone https://github.com/732857315/skills.git
+cd skills
+git submodule update --init --depth 1
 ```
 
-如果之前已经克隆本仓库，在仓库内运行：
+已有克隆则先运行 `git pull`，再运行上述 `git submodule update`。这些命令获取本仓库列出的技能与三个直接依赖，不自动展开上游自己的构建子模块。
 
-```sh
-git pull
-git submodule update --init --recursive
-```
-
-下载 GitHub 的 ZIP 不包含子模块文件；需要 ZIP 时，请进入对应的独立仓库下载。
+需要从源码构建上游库时，按对应仓库说明补齐其内部子模块。`--recursive` 会继续获取上游嵌套源码；例如 kicad-python 的构建源码还引用 KiCad。GitHub ZIP 不包含子模块文件，需要 ZIP 时请进入对应独立仓库下载。
 
 ## 使用
 
-按各技能目录中的 `README.md` 和 `SKILL.md` 操作。电路板设计的安装目录名为 `circuit-board-design`，保留其 `agents/` 与 `references/`。
+按技能目录中的 `README.md` 和 `SKILL.md` 操作。电路板设计安装目录名为 `circuit-board-design`，保留其 `agents/` 与 `references/`。`dependencies/` 中是工具源码，安装及 MCP 配置按 [依赖说明](./dependencies/README.md) 完成。
