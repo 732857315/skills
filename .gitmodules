@@ -1,0 +1,4 @@
+[submodule "circuit-board-design"]
+	path = circuit-board-design
+	url = https://github.com/732857315/skill_circuit-board-design.git
+	branch = main
