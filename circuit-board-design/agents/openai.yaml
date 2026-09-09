@@ -1,0 +1,7 @@
+interface:
+  display_name: "电路板设计"
+  short_description: "教师指导下完成原理图、PCB、符号封装库、3D 模型与设计验证"
+  default_prompt: "使用 $circuit-board-design，在教师指导下完成本次电路设计，说明依据并交付原理图、PCB 或库文件及验证结果。"
+
+policy:
+  allow_implicit_invocation: true
